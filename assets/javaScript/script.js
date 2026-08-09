@@ -34,7 +34,7 @@ btnTarea.addEventListener("click", () => {
 
     //validamos que el input no este vacío
     if (nombreTarea ===""){
-        alert("Escribe una nueva tarea...");
+        alert("Nueva tarea...");
         return;
     }
 
