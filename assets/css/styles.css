@@ -10,10 +10,11 @@ html{
 }
 
 main{
+    background-image: url(https://img.magnific.com/vector-gratis/fondo-papel-azul-forrado-dibujado-mano_23-2151105453.jpg?semt=ais_hybrid&w=740&q=80);
     background-color: rgb(64, 126, 87);
     width: 500px;
     height: 500px;
-    padding: auto;
+    padding: 0 120px;
     border-radius: 15px;
 }
 
@@ -21,9 +22,12 @@ h1{
     padding: 10px 0px 25px 10px;
 }
 
+h3{
+    padding: 8px 0 0 0;
+}
+
 div{
     padding: 0 0 0 10px;
-
 }
 
 #tipo{
@@ -50,8 +54,7 @@ main{
 }
 
 #listaTareas{
-    width: 380px;
-    background-color: #2b7c5d;
+    width: 350px;
     border-radius: 5px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
