@@ -12,7 +12,8 @@ const renderizarLista = () => {
     for (let tarea of tareas) {
         plantilla += `
         <li> 
-        Id: ${tarea.id} - Nombre: ${tarea.nombre}
+        Id: ${tarea.id} - Nombre: ${tarea.nombre} 
+        <input type="checkbox"
         </li>
         `;
     }
@@ -33,7 +34,8 @@ btnTarea.addEventListener("click", () => {
     const nuevaTarea = {
         id: Date.now(),
         nombre: nombreTarea
-    } ;
+        
+    };
 
     //Agregamos el servicio al arreglo
     tareas.push(nuevaTarea);
