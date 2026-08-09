@@ -5,6 +5,7 @@ const tareas = [];
 const listaTareas = document.querySelector("#listaTareas");
 const btnTarea = document.querySelector("#btnTarea");
 const inputLista = document.querySelector("#inputLista");
+const eleContador = document.querySelector("#contador")
 
 // Función para renderizar (mostrar las tareas en pantalla).
 const renderizarLista = () => {
@@ -13,12 +14,19 @@ const renderizarLista = () => {
         plantilla += `
         <li> 
         Id: ${tarea.id} - Nombre: ${tarea.nombre} 
-        <input type="checkbox"
+        <input type="checkbox" onchange="actualizarContador()">
         </li>
         `;
     }
     listaTareas.innerHTML = plantilla;
+    actualizarContador();
 }
+
+// Función contador de checkbox
+const actualizarContador = () => {
+    eleContador.textContent = `Contador: ${document.querySelectorAll('input[type="checkbox"]:checked').length}`;
+};
+
 
 // Evento para agregar nueva tarea desde el input
 btnTarea.addEventListener("click", () => {
@@ -33,7 +41,9 @@ btnTarea.addEventListener("click", () => {
     //Creamos el nuevo objeto con un ID unico basado en la fecha actual y el nombre ingresado
     const nuevaTarea = {
         id: Date.now(),
-        nombre: nombreTarea
+        nombre: nombreTarea,
+        completado: false
+        
         
     };
 
